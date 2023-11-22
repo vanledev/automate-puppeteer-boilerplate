@@ -1,4 +1,4 @@
-const fs = require('fs');
+
 
 
 
@@ -7,10 +7,12 @@ function getNeededCookiesFromHeader(cookiesFromHeader) {
     return cookies.join(";");
   }
   
+
+
 async function useCookieToLogIn(browser,savinglocation) {
 
 
-    const str = await fs.promises.readFile(savinglocation,'utf8');
+    const str = await promises.readFile(savinglocation,'utf8');
     const cookiesArr = JSON.parse(str);
     const page = await browser.newPage();
     for (let cookie of cookiesArr) {
@@ -39,8 +41,8 @@ async function saveCookies(page, savinglocation) {
 
     await page.waitForNavigation({ waitUntil: 'domcontentloaded' });
     const cookie = await page.cookies();
-    await fs.promises.writeFile(savinglocation, JSON.stringify(cookie));
+    await promises.writeFile(savinglocation, JSON.stringify(cookie));
 
 }
 
-module.exports = {useCookieToLogIn,login,saveCookies}
+export default {useCookieToLogIn,login,saveCookies}
