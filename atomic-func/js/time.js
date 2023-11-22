@@ -14,6 +14,19 @@ async function limitTime(ms){
     })
 }
 
+
+function displayDateTime() {
+    const nowInMinus11 = Date.now() - 18 * 60 * 60 * 1000;
+    const dateObj = new Date(nowInMinus11);
+  
+    const month = dateObj.getMonth();
+    const year = dateObj.getFullYear();
+    const date = dateObj.getDate();
+    const hour = dateObj.getHours();
+    const minute = dateObj.getMinutes();
+    // console.log(date, month,year,hour,minute)
+    return { date, month, year, hour, minute };
+  }
 const timeFn = {getCurrentDateTimeAsFileName, limitTime};
 
 

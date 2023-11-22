@@ -1,5 +1,12 @@
 const fs = require('fs');
 
+
+
+function getNeededCookiesFromHeader(cookiesFromHeader) {
+    const cookies = cookiesFromHeader.map((item) => item.split(";")[0]);
+    return cookies.join(";");
+  }
+  
 async function useCookieToLogIn(browser,savinglocation) {
 
 
