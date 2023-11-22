@@ -1,0 +1,33 @@
+{
+  "name": "hoi-dap",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "checklink": "node ./change-ava/main-func/checkChangeAvaLink.js",
+    "upload": "node ./change-ava/main-func/uploadPDF.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cheerio": "^1.0.0-rc.10",
+    "csv-parse": "^5.3.0",
+    "csv-parser": "^3.0.0",
+    "csv-writer": "^1.6.0",
+    "form-data": "^4.0.0",
+    "fs-readdir-recursive": "^1.1.0",
+    "html-entities": "^2.3.2",
+    "node-fetch": "^3.0.0",
+    "node-html-parser": "^6.0.0",
+    "p-limit": "^4.0.0",
+    "pdfkit": "^0.12.3",
+    "puppeteer": "^10.2.0",
+    "replace-ext": "^2.0.0",
+    "request": "^2.88.2",
+    "sanitize-filename": "^1.6.3",
+    "xlsx": "^0.18.5"
+  },
+  "type": "module"
+}

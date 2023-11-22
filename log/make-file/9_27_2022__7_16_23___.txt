@@ -1,0 +1,1 @@
+Error: ENOENT: no such file or directory, open 'E:\projects\js\node\thành hải\thay-ava tong hop\thay-ava/options/wordpress/posts/12-title.txt'
