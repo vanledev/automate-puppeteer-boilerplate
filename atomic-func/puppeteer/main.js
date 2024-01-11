@@ -1,4 +1,5 @@
 import puppeteer from "puppeteer";
+import goto from "./navigate.js";
 
 console.log("Start opening browser, please wait...");
 process.setMaxListeners(Infinity);
@@ -8,10 +9,15 @@ const browser = await puppeteer.launch({
   args: ["--start-maximized"],
 });
 let page = await browser.newPage();
+await page.evaluate(() => {
+  window.onbeforeunload = null;
+});
 
 page.setDefaultNavigationTimeout(120000);
-const url = " https://web.telegram.org/a/#-1001144740753";
+const url = " https://web.telegraddddm.org/a/#-1001144740753";
 
+await goto(page, url);
+ 
 await page.goto(url, { waitUntil: "domcontentloaded" });
 await page.waitForSelector("button");
 await page.click("button");

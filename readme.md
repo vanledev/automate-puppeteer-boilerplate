@@ -1,7 +1,7 @@
 Start using app:
 - `npm start`
 
-3 kinds of logging:
+3 kinds of logging: (import debug from atomic-func)
 - debug.dev: only when environment variable DEBUG is set to "dev"
     - set environment variable in powershell to view all dev console logs: $env:DEBUG="dev" (package "debug" only works with variables set by command line, not with variables in .env)
 - debug.err: log to the console for everyone and write to output/log.txt
