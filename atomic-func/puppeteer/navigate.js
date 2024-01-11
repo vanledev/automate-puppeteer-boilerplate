@@ -1,5 +1,6 @@
 import fetch from "node-fetch";
 import debug from "../debug/debug.js";
+import fetchOrAbort from "../life-cycle/fetch.js";
 
 async function goto(page, url) {
   try {
