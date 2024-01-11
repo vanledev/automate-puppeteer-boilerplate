@@ -8,5 +8,7 @@ try {
 } catch {
   logCatch();
 } finally {
+  // Close db if needed
+  // exit process
   process.exit();
 }
