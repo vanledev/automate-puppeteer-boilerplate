@@ -1,0 +1,4 @@
+- set environment variable in powershell: $env:DEBUG="dev"
+- remove enviroment variable: $env:DEBUG=""
+- package "debug" only works with variables set by command line, not with variables in .env 
+- "dotenv" package also tries to retrieve variables set by command line first, if the variable is not set, the value from .env will be used

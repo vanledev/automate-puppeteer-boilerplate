@@ -1,7 +1,8 @@
-import * as dotenv from "dotenv"; // see https://github.com/motdotla/dotenv#how-do-i-use-dotenv-with-import
+import * as dotenv from "dotenv"; 
+import getAppRoot from "../../get-app-root.js";
 
 function env(variable) {
-  dotenv.config();
+  dotenv.config({path: getAppRoot() + '/atomic-func/env/.env'});
   return process.env[variable];
 }
 export default env;
