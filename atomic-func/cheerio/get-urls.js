@@ -3,7 +3,7 @@ import regexFn from "../js/regex.js";
 import fetch from "node-fetch";
 import getAppRoot from "../../get-app-root.js";
 import timeFn from "../js/time.js";
-import logFn from "../js/log.js";
+import logFn from "../debug/log.js";
 import helpers from "./helpers.js";
 import csvFn from "../csv/crud.js";
 import helpersJS from "../js/helpers.js";

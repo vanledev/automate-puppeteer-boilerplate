@@ -1,3 +1,5 @@
+import debug from "../debug/debug.js";
+
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 const stopInteval = (params) => {
   clearInterval(params);
@@ -23,3 +25,23 @@ async function retryFunctionWithDelay(childFunction, count, delay) {
     await sleep(delay);
   }
 }
+
+// async function fn1() {
+//   return 1;
+// }
+// async function fn2() {
+//   return x;
+// }
+// promiseAll(fn1, fn2);
+async function promiseAll(...fns) {
+  const promises = fns.map((fn) => fn());
+
+  const res = await Promise.allSettled(promises);
+  if (res) {
+    debug.dev("all settled", res);
+    return res;
+  }
+}
+
+const promiseFn = { promiseAll };
+export default promiseFn;

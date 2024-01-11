@@ -1,3 +1,0 @@
-function stopApp() {
-  process.exit();
-}
