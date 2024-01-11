@@ -12,12 +12,8 @@ let page = await browser.newPage();
 page.setDefaultNavigationTimeout(120000);
 const url = " https://web.telegram.org/a/#-1001144740753";
 
-await page.goto(url, { waitUntil: "load" });
-
-await page.waitForNavigation({ waitUntil: "load" });
-console.log("done wait for navigation");
-const phone = await page.waitForSelector("button");
-console.log("loaded", phone);
+await page.goto(url, { waitUntil: "domcontentloaded" });
+await page.waitForSelector("button");
 await page.click("button");
 // const text = await page.evaluate((el) => {
 //   return el.textContent;
@@ -29,14 +25,14 @@ await page.click("button");
 // const myFrame = page
 //   .frames()
 //   .find((frame) => frame.name().includes(input.frameName));
-
-// await myFrame.$eval(
-//   input.selector,
-//   (el, content) => {
-//     el.innerHTML = content;
-//   },
-//   input.content
-// );
+await page.waitForSelector("input#sign-in-phone-number");
+await page.$eval(
+  "input#sign-in-phone-number",
+  (el, content) => {
+    el.innerHTML = content;
+  },
+  "+84375622079"
+);
 
 // await page.setContent(html);
 

@@ -1,0 +1,3 @@
+Error: ENOENT: no such file or directory, open 'E:\projects\js\node\thành hải\thay-ava tong hop\thay-ava/input/wordpress/posts/[object Object]-title.txt'
+Error: ENOENT: no such file or directory, open 'E:\projects\js\node\thành hải\thay-ava tong hop\thay-ava/input/wordpress/posts/[object Object]-title.txt'
+Error: ENOENT: no such file or directory, open 'E:\projects\js\node\thành hải\thay-ava tong hop\thay-ava/input/wordpress/posts/[object Object]-title.txt'

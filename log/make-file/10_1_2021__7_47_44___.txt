@@ -1,4 +1,0 @@
-Error: ENOENT: no such file or directory, open 'E:\projects\node\hoi-dap/options/wordpress/posts/12-title.txt'
-ReferenceError: Cannot access 'str' before initialization
-ReferenceError: Cannot access 'str' before initialization
-ReferenceError: Cannot access 'str' before initialization
