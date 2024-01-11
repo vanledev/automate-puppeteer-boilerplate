@@ -1,10 +1,10 @@
 {
-  "name": "hoi-dap",
+  "name": "app",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "node ./test/test.js",
-    "start": "node ./index.js"
+    "start": "node ./main/index.js"
   },
   "author": "",
   "license": "ISC",

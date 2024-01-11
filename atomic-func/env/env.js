@@ -6,3 +6,4 @@ function env(variable) {
   return process.env[variable];
 }
 export default env;
+// - "dotenv" package also tries to retrieve variables set by command line first, if the variable is not set, the value from .env will be used
