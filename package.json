@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "checklink": "node ./change-ava/main-func/checkChangeAvaLink.js",
-    "upload": "node ./change-ava/main-func/uploadPDF.js"
+    "test": "node ./test/test.js",
+    "start": "node ./index.js"
+    
   },
   "author": "",
   "license": "ISC",
