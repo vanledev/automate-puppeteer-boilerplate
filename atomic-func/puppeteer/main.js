@@ -1,5 +1,5 @@
 import puppeteer from "puppeteer";
-import goto from "./navigate.js";
+import goto from "./goto.js";
 
 console.log("Start opening browser, please wait...");
 process.setMaxListeners(Infinity);
