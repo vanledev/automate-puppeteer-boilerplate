@@ -8,7 +8,7 @@ import helpers from "./helpers.js";
 import csvFn from "../csv/crud.js";
 import helpersJS from "../js/helpers.js";
 
-// console.log( helpersJS.getURLPrefix(`http://benhvienyhoccotruyencantho.vn/H%E1%BB%8Fi%C4%90%C3%A1p/tabid/2485/ctl/Add_CauHoi/mid/7792/Default.aspx`));
+
 main();
 
 async function main() {

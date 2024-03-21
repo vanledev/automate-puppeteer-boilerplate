@@ -30,3 +30,5 @@ use `fetchOrAbort`: to abort request if we dont receive any response after a cer
 - main/sub: submodules
 
  
+# how to use atomic-func
+some func are atomic, but some func are like sample quickstart code, e.g /cheerio/get-urls.js, clone that quickstart and try running it.
