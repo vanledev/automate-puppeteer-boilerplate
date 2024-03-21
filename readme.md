@@ -1,23 +1,30 @@
-Start using app:
+# Start using app:
 - `npm start`
 
-3 kinds of logging: (import debug from atomic-func)
-- debug.dev: only when environment variable DEBUG is set to "dev"
-    - set environment variable in powershell to view all dev console logs: $env:DEBUG="dev" (package "debug" only works with variables set by command line, not with variables in .env)
-- debug.err: log to the console for everyone and write to output/log.txt
-- debug.clearLog: clear file output/log.txt
-
-Fail fast, success late:
+# Logging
 
 
-When fetch:
-- use fetchOrAbort: to abort request if we dont receive any response after certain time
+import debug from *atomic-func* and write those functions in the code
+- `debug.dev`: This command will log to console if the environment variable DEBUG = "dev"
+    - How to set environment variable
+        - open PowerShell
+        - type `$env:DEBUG="dev"`
+        - package "debug" doens't work with variables in *.env* file
+- `debug.err`: This will always log to the console and write to *output/log.txt*
+- `debug.clearLog`: This will clear file *output/log.txt*
 
-Naming convention:
+
+# Fail fast, success later
+
+
+# When fetch
+use `fetchOrAbort`: to abort request if we dont receive any response after a certain time
+
+# Naming convention
 - products instead of productList
 
-Modules:
-- main/index: Only call main 
-- main/main: main function, decomposing the rest of the code into submodules
+# Modules
+- main/index: main function. Start here.
+- main/sub: submodules
 
  
