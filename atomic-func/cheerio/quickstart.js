@@ -7,11 +7,14 @@ import logFn from "../debug/log.js";
 import helpers from "./helpers.js";
 import csvFn from "../csv/crud.js";
 import helpersJS from "../js/helpers.js";
+import chalk from "chalk";
+import debug from "../atomic-func/debug/debug.js";
+import getAppRoot from "../../get-app-root.js"; 
+ 
 
+ 
 
-main();
-
-async function main() {
+async function quickstart() {
   const errorFileName = timeFn.getCurrentDateTimeAsFileName();
   const sites = fs
     .readFileSync(`${getAppRoot()}/input/target-sites.csv`, "utf8")
@@ -101,3 +104,6 @@ async function appendToFile(errorFileName, targetSiteUrl, sliced) {
     console.log(err);
   }
 }
+
+
+export default quickstart;
