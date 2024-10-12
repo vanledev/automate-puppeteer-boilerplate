@@ -10,7 +10,7 @@ const browser = await puppeteer.launch({
 let page = await browser.newPage();
 
 page.setDefaultNavigationTimeout(120000);
-const url = 'https://seller-us.tiktok.com/product/manage?shop_region=US&tab=failed'
+const url = 'gmail.com'
 await page.goto(url, { waitUntil: "domcontentloaded" });
 
 await page.waitForNavigation({ waitUntil: "domcontentloaded" });

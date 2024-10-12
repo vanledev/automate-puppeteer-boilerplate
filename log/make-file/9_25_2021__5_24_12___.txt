@@ -1,4 +1,0 @@
-Error: ENOENT: no such file or directory, open 'E:\projects\node\hoi-dap/options/wordpress/posts/12-title.txt'
-Error: ENOENT: no such file or directory, open 'E:\projects\node\hoi-dap/options/wordpress/posts/42558-title.txt'
-Error: ENOENT: no such file or directory, open 'E:\projects\node\hoi-dap/options/wordpress/posts/42531-title.txt'
-Error: ENOENT: no such file or directory, open 'E:\projects\node\hoi-dap/options/wordpress/posts/42482-title.txt'
