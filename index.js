@@ -7,7 +7,7 @@ const browser = await puppeteer.launch({
   headless: false,
   args: ["--start-maximized"],
 });
-const page = await browser.newPage();
+let page = await browser.newPage();
 
 page.setDefaultNavigationTimeout(120000);
 const url = 'https://seller-us.tiktok.com/product/manage?shop_region=US&tab=failed'
@@ -43,7 +43,7 @@ await dialog.dismiss();
 await page.click('[id$="TroVe"]');
 
 const fields = contentFn.createFields(postID);
-let page = await formFn.sendForm({ browser, url, fields, fileName });
+  page = await formFn.sendForm({ browser, url, fields, fileName });
 let afterSendFn = whichAfterSendFn(url);
 const pageDoneAfterSend = await afterSendFn({ page, fileName, url });
 if (pageDoneAfterSend) {
