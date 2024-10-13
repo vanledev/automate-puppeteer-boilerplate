@@ -1,9 +1,4 @@
-import helpersFn from './helpers.js';
-import logFn from '../js/log.js';
-import getAppRoot from '../../get-app-root.js';
-import puppeteer from 'puppeteer';
-import csvFn from '../csv/crud.js';
-import timeFn from '../js/time.js';
+ 
 
 async function onSucessRedirect(page) {
     page.on('response', async (res) => {

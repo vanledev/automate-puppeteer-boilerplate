@@ -9,32 +9,34 @@ import read from 'fs-readdir-recursive';
 import replaceExt from 'replace-ext';
 
 
-async function convertRecursiveToCSV({ folder, exclude, ext }) {
-    const files = read(folder, function (name, index, dir) {
-        return !dir.includes(exclude)
+ function convertRecursiveToCSV({ inputPath, outputPath, exclude }) {
+    
+    const files = read(inputPath, function (name, index, dir) {
+        return exclude ? !dir.includes(exclude) : true
     });
-
-    files.forEach((file) => {
+    
+    files.forEach((file, i) => {
 
         if (path.extname(file) == '.xlsx') {
 
-            sheetToCsv({ inputFile: `${folder}/${file}`, outputFile: replaceExt(`${folder}/${file}`, '.csv') });
-        }
+            sheetToCsv({ inputFile: `${inputPath}/${file}`, outputFile: replaceExt(`${outputPath}/${file}`, '.csv') });
+        } 
+       
 
     })
+    return true
+    // sheetToCsv({
+    //     inputFile: './options/spin/test.xlsx',
+    //     outputFile: './options/spin/test.csv'
+    // })
+    function sheetToCsv({ inputFile, outputFile }) {
+        const worksheet = XLSX.readFile(inputFile);
+        XLSX.writeFile(worksheet, outputFile, { bookType: "csv" });
+        return;
+    }
 }
 
 
-
-// sheetToCsv({
-//     inputFile: './options/spin/test.xlsx',
-//     outputFile: './options/spin/test.csv'
-// })
-function sheetToCsv({ inputFile, outputFile }) {
-    const worksheet = XLSX.readFile(inputFile);
-    XLSX.writeFile(worksheet, outputFile, { bookType: "csv" });
-    return;
-}
 
 async function writeMyCSV({ path, obj, header }) {
     // const obj = [
@@ -55,7 +57,10 @@ async function writeMyCSV({ path, obj, header }) {
 }
 
 
-// const res = await readMyCSV({ headers: ['link'], path: './options/links-pool/all-links.csv', isSkipFirstLine: false });
+// const res = await readMyCSV({ 
+// headers: ['link'],
+//  path: './options/links-pool/all-links.csv',
+//   isSkipFirstLine: false });
 // console.log(res)
 async function readMyCSV({ headers, path, isSkipFirstLine }) {
 
@@ -88,9 +93,8 @@ async function readMyCSV({ headers, path, isSkipFirstLine }) {
     }
     return records;
 }
+
 const csvFn = { convertRecursiveToCSV, writeMyCSV, readMyCSV };
-
-
 
 
 export default csvFn;

@@ -24,6 +24,8 @@
     "p-limit": "^4.0.0",
     "pdfkit": "^0.12.3",
     "puppeteer": "^10.2.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
     "replace-ext": "^2.0.0",
     "request": "^2.88.2",
     "sanitize-filename": "^1.6.3",

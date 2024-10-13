@@ -2,7 +2,7 @@ import fs from 'fs';
 import getAppRoot from '../../get-app-root.js';
 
 function createFields(postID) {
-    const folder = `${getAppRoot()}/options/`;
+    const folder = `${getAppRoot()}/user/input/acc.xlsx`;
     const content = fs.readFileSync(`${folder}/wordpress/posts/${postID}-content.txt`, 'utf8');
     const title = fs.readFileSync(`${folder}/wordpress/posts/${postID}-title.txt`, 'utf8');
     const yourName = fs.readFileSync(`${folder}/your-name.txt`,'utf8');
